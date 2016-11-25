@@ -5,7 +5,7 @@ var numberOfRhymes = 5;
 var userWord = '';
 
 var displayRhyme = function(wordOne, rhymingWords){
-  rhymingWord.innerHTML = wordOne +' ryhmes with: ' + '<br>' + rhymingWords.join(', ');
+  rhymingWord.innerHTML = wordOne +' rhymes with: ' + '<br>' + rhymingWords.join(', ');
 }
 
 var getJSON = function(url, callback) {

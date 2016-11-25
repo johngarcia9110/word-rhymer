@@ -53,6 +53,7 @@ body {
   font-size: 30px;
   color: #2f7a9c;
   position: relative;
+  text-transform: capitalize;
 }
 
 #result:before {
