@@ -8,7 +8,7 @@ var userWord = '';
 
 var displayRhyme = function(wordOne, rhymingWords){
   console.log(userWord);
-  rhymingWord.innerHTML = '"' + wordOne + '"' +' ryhmes with: ' + '<br>' +'"' + rhymingWords.toString().join() + '"';
+  rhymingWord.innerHTML = '"' + wordOne + '"' +' ryhmes with: ' + '<br>' +'"' + rhymingWords.toString() + '"';
 }
 
 var getJSON = function(url, callback) {
