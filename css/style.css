@@ -5,7 +5,7 @@ body {
 .container {
   display: block;
   position: absolute;
-  top: 25%;
+  top: 50%;
   left: 50%;
   margin: -150px 0 0 -265px;
   background: #59CD90;
@@ -68,6 +68,26 @@ body {
   border-top: 10px solid white;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+}
+
+footer p a {
+  color: #FAC05E;
+}
+
+footer p a:hover {
+  color: #FAC05E;
 }
 
 input[type="text"]::-webkit-input-placeholder {
