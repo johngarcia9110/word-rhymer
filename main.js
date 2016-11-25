@@ -3,11 +3,12 @@
 var api = 'https://api.datamuse.com/words?rel_rhy=';
 var query = api + userWord + '&callback';
 var rhymingWord = document.getElementById('result');
+var numberOfRhymes = 5;
 var userWord = '';
 
-var displayRhyme = function(wordOne, wordTwo){
+var displayRhyme = function(wordOne, rhymingWords){
   console.log(userWord);
-  rhymingWord.innerHTML = '"' + wordOne + '"' +' ryhmes with: ' + '"' + wordTwo + '"';
+  rhymingWord.innerHTML = '"' + wordOne + '"' +' ryhmes with: ' + '<br>' +'"' + rhymingWords.toString().join() + '"';
 }
 
 var getJSON = function(url, callback) {
@@ -29,9 +30,11 @@ var getRhyme = function(){
   userWord = document.getElementById('userWord').value;
 
   getJSON(api + userWord + '&callback',function(err, data) {
-
-    displayRhyme( userWord , data[0].word);
-
+    var wordsThatRhyme = [];
+    for(var i = 0; i < numberOfRhymes; i++){
+      wordsThatRhyme.push(data[i].word);
+    }
+    displayRhyme( userWord , wordsThatRhyme);
   });
 
 }
