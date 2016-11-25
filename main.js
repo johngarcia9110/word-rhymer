@@ -5,12 +5,12 @@ var query = api + userWord + '&callback';
 var rhymingWord = document.getElementById('result');
 var userWord = '';
 
-function displayRhyme(wordOne, wordTwo){
+var displayRhyme = function(wordOne, wordTwo){
   console.log(userWord);
   rhymingWord.innerHTML = '"' + wordOne + '"' +' ryhmes with: ' + '"' + wordTwo + '"';
 }
 
-function getJSON(url, callback) {
+var getJSON = function(url, callback) {
   var xhr = new XMLHttpRequest();
   xhr.open("get", url, true);
   xhr.responseType = "json";
@@ -25,7 +25,7 @@ function getJSON(url, callback) {
     xhr.send();
 }
 
-function getRhyme(){
+var getRhyme = function(){
   userWord = document.getElementById('userWord').value;
 
   getJSON(api + userWord + '&callback',function(err, data) {
